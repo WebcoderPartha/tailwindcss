@@ -1,23 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        colors: {
-          twd: 'blue'
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              twd: "blue",
+            },
+            fontSize: {
+              twdxl: "30px",
+            },
+            screens: {
+              ok: { min: "320px", max: "767px" },
+              // => @media (min-height: 800px) { ... }
+            },
+          },
         },
-        fontSize: {
-          twdxl: '30px'
-        }
-      }
-    }
-  </script>
-</head>
-<body>
-  <h1 class="text-twd text-center text-twdxl">Welcome</h1>
-</body>
+      };
+    </script>
+  </head>
+  <body>
+    <h1 class="text-twd ok:text-center text-twdxl">
+      Welcome to bangladesh
+    </h1>
+  </body>
 </html>
